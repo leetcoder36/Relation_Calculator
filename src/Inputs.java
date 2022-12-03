@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Inputs {
 
-    private ArrayList<Ordered_Pair> list;
+     ArrayList<Ordered_Pair> list;
 
     public Inputs(ArrayList<Ordered_Pair> list)
     {
@@ -36,12 +36,14 @@ public class Inputs {
             }
 
 
+
         }
         else
         {
             System.out.println("Invalid input");
 
         }
+        Relation r1 = new Relation(this.list);
     }
 
     public void printList()

@@ -8,6 +8,16 @@ public class Ordered_Pair {
         this.b = b;
     }
 
+    public int getA()
+    {
+        return a;
+    }
+
+    public int getB()
+    {
+        return b;
+    }
+
     public String getOrdered_Pair()
     {
         return "(" + a + ", " + b + ")";

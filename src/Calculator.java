@@ -7,15 +7,71 @@ public class Calculator
 
     public Calculator()
     {
-
+        this.list1 = new ArrayList<Ordered_Pair>();
     }
 
     public void run()
     {
         Inputs hello = new Inputs(list1);
         hello.launch();
-        hello.printList();
+        this.list1 = hello.list;
+        if(this.isSymmetric())
+            System.out.println("Symmetric");
+        else
+            System.out.println("Not symmetric");
+        if(this.isAntisymmetric())
+            System.out.println("Antisymmetric");
+        else
+            System.out.println("Not antisymmetric");
+
+
+
     }
+
+    public boolean isSymmetric()
+    {
+        boolean found;
+        for(int i = 0; i < list1.toArray().length; i++)
+        {
+            found = false;
+            for(int k = 0; k < list1.toArray().length; k++)
+            {
+                if((list1.get(i).getA() == list1.get(k).getB()) && (list1.get(i).getB() == list1.get(k).getA()))
+                    found = true;
+            }
+            if(!found)
+                return false;
+
+
+
+
+        }
+        return true;
+    }
+
+    public boolean isAntisymmetric()
+    {
+        boolean found;
+        for(int i = 0; i < list1.toArray().length; i++)
+        {
+            found = false;
+            for (int k = 0; k < list1.toArray().length; k++) {
+                if (((list1.get(i).getA() == list1.get(k).getB()) && (list1.get(i).getB() == list1.get(k).getA())) && list1.get(i).getA() != list1.get(i).getB())
+                    found = true;
+
+            }
+            if(!found)
+                return true;
+
+        }
+        return false;
+
+
+
+
+
+    }
+
 
 }
 
