@@ -16,8 +16,8 @@ public class Inputs {
         Scanner scan = new Scanner(System.in);
         boolean finished = false;
         Ordered_Pair pair;
-        System.out.println("This program takes a relation as input and determines its reflexivity, symmetry, antisymmetry, and" +
-                "/or transitivity.");
+        System.out.println("This program takes a relation as input and determines its symmetry, antisymmetry, and" +
+                " transitivity.");
         System.out.println("How many ordered pairs are in your relation?");
         int input = scan.nextInt();
         if(input > 0) {
@@ -37,6 +37,8 @@ public class Inputs {
 
 
 
+
+
         }
         else
         {
@@ -44,6 +46,7 @@ public class Inputs {
 
         }
         Relation r1 = new Relation(this.list);
+
     }
 
     public void printList()
