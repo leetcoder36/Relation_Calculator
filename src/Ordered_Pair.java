@@ -1,6 +1,6 @@
 public class Ordered_Pair {
-    private int a;
-    private int b;
+    private final int a;
+    private final int b;
 
     public Ordered_Pair(int a, int b)
     {

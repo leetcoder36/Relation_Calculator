@@ -3,7 +3,8 @@ import java.util.Scanner;
 
 public class Inputs {
 
-     ArrayList<Ordered_Pair> list;
+     private ArrayList<Ordered_Pair> list;
+     private boolean running = true;
 
     public Inputs(ArrayList<Ordered_Pair> list)
     {
@@ -14,13 +15,16 @@ public class Inputs {
     {
         int first; int second; int count;
         Scanner scan = new Scanner(System.in);
-        boolean finished = false;
         Ordered_Pair pair;
         System.out.println("This program takes a relation as input and determines its symmetry, antisymmetry, and" +
                 " transitivity.");
-        System.out.println("How many ordered pairs are in your relation?");
+        System.out.println("How many ordered pairs are in your relation? /n (enter 0 to end program)");
         int input = scan.nextInt();
-        if(input > 0) {
+        if(input == 0)
+        {
+            running = false;
+        }
+        else if(input > 0) {
             count = input;
             for (int i = 0; i < count; i++) {
                 System.out.println("Let's add an ordered pair");
@@ -45,10 +49,18 @@ public class Inputs {
             System.out.println("Invalid input");
 
         }
-        Relation r1 = new Relation(this.list);
 
     }
 
+    public ArrayList<Ordered_Pair> getList()
+    {
+        return list;
+    }
+
+    public boolean getRunning()
+    {
+        return running;
+    }
     public void printList()
 
     {
