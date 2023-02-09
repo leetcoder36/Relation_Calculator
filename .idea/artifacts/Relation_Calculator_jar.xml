@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Relation_Calculator:jar">
+    <output-path>$PROJECT_DIR$/../jarFiles</output-path>
+    <root id="archive" name="Relation_Calculator.jar">
+      <element id="module-output" name="Relation_Calculator" />
+    </root>
+  </artifact>
+</component>
